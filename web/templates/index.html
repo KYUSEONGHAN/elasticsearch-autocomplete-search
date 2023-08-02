@@ -2,21 +2,27 @@
 <html>
 <head>
     <title>KyoboBook Search</title>
-    <!-- Bootstrap CSS를 로드합니다 -->
+    <!-- Bootstrap CSS를 로드 -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        /* Custom CSS를 추가할 수 있습니다 */
-        body {
-            padding-top: 50px;
+        body, html {
+            height: 100%; /* 추가 */
+            margin: 0; /* 추가 */
+            padding: 0; /* 추가 */
+            display: flex; /* 추가 */
+            justify-content: center; /* 추가 */
+            align-items: center; /* 추가 */
         }
         .search-container {
             max-width: 600px;
-            margin: 0 auto;
         }
         .logo-img {
             display: block;
             margin: 0 auto;
             margin-bottom: 30px;
+        }
+        .input-group {  /* 추가 */
+            width: 100%;
         }
     </style>
 </head>
@@ -38,7 +44,7 @@
         </div>
     </div>
 
-    <!-- Bootstrap JS를 로드합니다 -->
+    <!-- Bootstrap JS를 로드 -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
