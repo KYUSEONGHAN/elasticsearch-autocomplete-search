@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>KyoboBook Search</title>
+    <!-- Bootstrap CSS를 로드합니다 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom CSS를 추가할 수 있습니다 */
+        body {
+            padding-top: 50px;
+        }
+        .search-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .logo-img {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container search-container">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <img src="https://contents.kyobobook.co.kr/resources/fo/images/common/ink/img_logo_kyobo@2x.png"
+                     alt="Kyobo Logo" class="logo-img">
+                <form action="/search" method="post">
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="search_query" placeholder="검색어를 입력하세요" style="border-right: none;">
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-outline-secondary" style="border-left: none;">검색</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS를 로드합니다 -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
