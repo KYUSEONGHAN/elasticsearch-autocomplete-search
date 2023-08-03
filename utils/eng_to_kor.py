@@ -7,11 +7,25 @@ eng_to_kor = {
     'Z': 'ㅋ', 'X': 'ㅌ', 'C': 'ㅊ', 'V': 'ㅍ', 'B': 'ㅠ', 'N': 'ㅜ', 'M': 'ㅡ'
 }
 
+kor_to_eng = {
+    'ㅂ': 'q', 'ㅈ': 'w', 'ㄷ': 'e', 'ㄱ': 'r', 'ㅅ': 't', 'ㅛ': 'y', 'ㅕ': 'u', 'ㅑ': 'i', 'ㅐ': 'o', 'ㅔ': 'p',
+    'ㅁ': 'a', 'ㄴ': 's', 'ㅇ': 'd', 'ㄹ': 'f', 'ㅎ': 'g', 'ㅗ': 'h', 'ㅓ': 'j', 'ㅏ': 'k', 'ㅣ': 'l',
+    'ㅋ': 'z', 'ㅌ': 'x', 'ㅊ': 'c', 'ㅍ': 'v', 'ㅠ': 'b', 'ㅜ': 'n', 'ㅡ': 'm',
+    'ㅃ': 'Q', 'ㅉ': 'W', 'ㄸ': 'E', 'ㄲ': 'R', 'ㅆ': 'T', 'ㅒ': 'O', 'ㅖ': 'P'
+}
+
 # 영타 -> 한글로 변환하는 함수
 def convert_to_korean(eng_text: str) -> str:
     return ''.join([eng_to_kor.get(ch, ch) for ch in eng_text])
 
+# 한글 -> 영어로 변환하는 함수
+def convert_to_english(kor_text: str) -> str:
+    return ''.join([kor_to_eng.get(ch, ch) for ch in kor_text])
+
 
 if __name__ == '__main__':
-    english_text = 'hello world' # ㅗㄷㅣㅣㅐ ㅈㅐㄱㅣㅇ
+    english_text = 'hello world'  # ㅗㄷㅣㅣㅐ ㅈㅐㄱㅣㅇ
     print(convert_to_korean(english_text))
+
+    korean_text = 'ㅎㅐㅐㅎㅣㄷ'  # google
+    print(convert_to_english(korean_text))
