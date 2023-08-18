@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 from wordcloud import WordCloud
 from konlpy.tag import Okt
+from PIL import Image
 import matplotlib.pyplot as plt
+import numpy as np
 
 # 서평 예시
 book_review = """“고전이 박제나 형해에 머무르지 않고 생생하게 살아 있음을 보여 주는 책, 고전을 통해 오늘의 현실을 사유할 수 있는 책, 그리하여 독자 스스로 고전의 세계를 새롭게 재창조해나가는 길을 여는 책을 설계하고자 하였습니다. 
@@ -24,8 +26,18 @@ okt = Okt()
 nouns = okt.nouns(book_review)
 clean_text = ' '.join(nouns)
 
+# 마스크 이미지 불러오기
+mask_image_path = "C:/Users/USER/Pictures/cloud_img.png"
+mask_image = np.array(Image.open(mask_image_path))
+
 # 워드 클라우드 객체 생성
-wordcloud = WordCloud(width=800, height=400, background_color='white', font_path=font_path, ).generate(clean_text)
+wordcloud = WordCloud(
+    width=800,
+    height=400,
+    background_color='white',
+    font_path=font_path,
+    mask=mask_image
+).generate(clean_text)
 
 
 if __name__ == '__main__':
